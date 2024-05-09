@@ -1,5 +1,7 @@
 // Init
 let db; // Autocomplete database
+//HACK(?) this url is probs NOT how github wants this to be fetched but uh, idc lmao
+var dbUrl = 'https://raw.githubusercontent.com/Snappsu/FurAffinity-Autocomplete/tag-db-migration/res/db/tags.json'
 var options = {
   method: 'GET'
 }; // For fetching the database
@@ -24,7 +26,7 @@ function Autocomplete(query) {
   for (let i = 0; i < preTags.length; i++) {
     for (let j = 0; j < db.length; j++) {
       let dbTagRegExp = new RegExp(db[j].Regex, "g")
-      //console.log(preTags[i] + "=>" + dbTagRegExp)
+      console.log(preTags[i] + "=>" + dbTagRegExp)
       if (dbTagRegExp.test(preTags[i])) {
         console.log("Match found: " + db[j].GeneralTag)
         addedTags.push(db[j].GeneralTag)
@@ -74,8 +76,8 @@ searchBox.addEventListener("submit", SearchSubmit)
 
 
 // Get the autocomp database
-fetch('https://opensheet.vercel.app/1s09cUGDsOSTohLHOcgsovGiVe_uSK33x4Fcs5dV-Eew/A:I?=', options)
+fetch(dbUrl, options)
   .then(response => response.json())
   .then(response => db = response)
-  //.then(response => console.log(response))
+  .then(response => console.log(response))
   .catch(err => console.error(err));
