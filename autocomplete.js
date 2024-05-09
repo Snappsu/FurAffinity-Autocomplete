@@ -1,7 +1,7 @@
 // Init
 let db; // Autocomplete database
 //HACK(?) this url is probs NOT how github wants this to be fetched but uh, idc lmao
-var dbUrl = 'https://raw.githubusercontent.com/Snappsu/FurAffinity-Autocomplete/tag-db-migration/res/db/tags.json'
+var dbUrl = 'https://raw.githubusercontent.com/Snappsu/FurAffinity-Autocomplete/main/res/db/tags.json'
 var options = {
   method: 'GET'
 }; // For fetching the database
