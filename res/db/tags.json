@@ -1,0 +1,26 @@
+[
+	{
+		"General Tag": "Breast Expansion",
+		"Regex": "(be|breastexpansion|breast_expansion)",
+		"Aliases": "be",
+		"undefined": "breast_expansion"
+	},
+	{
+		"General Tag": "Oviposition",
+		"Regex": "(ovi|ovipos|oviposition|egg_laying|egglaying)",
+		"Aliases": "ovi",
+		"undefined": "egglaying"
+	},
+	{
+		"General Tag": "Weight Gain",
+		"Regex": "(wg|weightgain|weight_gain)",
+		"Aliases": "wg",
+		"undefined": "weight_gain"
+	},
+	{
+		"General Tag": "YCH",
+		"Regex": "(ych|yourcharacterhere|your_character_here)",
+		"Aliases": "ych",
+		"undefined": "your_character_here"
+	}
+]
